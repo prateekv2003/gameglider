@@ -35,6 +35,7 @@
     height: 100vh;
     background: red;
 }
+
 .navbar {
     width: 100%;
     height: 60px;
@@ -54,11 +55,19 @@
     text-transform: capitalize;
     font-size: 50px;
     letter-spacing: 2px;
+    animation: slideRight 0.5s linear 1s backwards;
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
 }
 
 .neonText {
     color: #fff;
-    text-shadow: 0 0 7px #fff, 0 0 10px #2300ff, 0 0 21px #5900dd, 0 0 42px #681bff, 0 0 82px #5d00b9, 0 0 92px #1f0066, 0 0 102px #06040a, 0 0 151px #1700a8;
+    /* text-shadow: 0 0 7px #fff, 0 0 10px #2300ff, 0 0 21px #5900dd, 0 0 42px #681bff, 0 0 82px #5d00b9, 0 0 92px #1f0066, 0 0 102px #06040a, 0 0 151px #1700a8; */
 }
 
 /* Flickering animation */
@@ -96,6 +105,14 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
+    animation: slideLeft 0.5s linear 1s backwards;
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
 }
 
 .toggle-btn span {
@@ -141,7 +158,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    -webkit-box-reflect: below 20px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    -webkit-box-reflect: below 20px linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
     transition: 1s;
     left: 0;
     z-index: 5;
@@ -176,24 +193,31 @@
 }
 
 .page.home {
-    /* background-image: url("https://github.com/kunaal438/3d-navbar-2/blob/master/home.jpeg?raw=true"); */
     background-image: url("../../assets/home.jpg");
     background-size: cover;
-    /* background-size:100% 100%; */
     background-repeat: no-repeat;
     background-position: center;
+    animation: slideUp 0.5s linear 1s backwards;
 }
 
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+}
 .page.project {
     background-image: url("https://github.com/kunaal438/3d-navbar-2/blob/master/project.png?raw=true");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .page.about {
     background-image: url("https://github.com/kunaal438/3d-navbar-2/blob/master/about.png?raw=true");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .page .title {
