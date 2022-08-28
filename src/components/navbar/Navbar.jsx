@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
 import { Link } from 'react-router-dom'
 import "./navbar.css"
 
@@ -8,48 +8,71 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function TopNavbar() {
-    return (
-        <Navbar bg="success" variant="dark">
-            <Container>
-                <Navbar.Brand href="/">Fodrix Admin</Navbar.Brand>
-                <Nav className="me-auto">
-                    <NavDropdown title="Photographer" id="basic-nav-dropdown">
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to="/photographer-add">Add Photographer</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to="/photographer-show">Show Photographer</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to="/photographer-update">Update Photographer</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to>Cancel</Link>
-                        </NavDropdown.Item>
-                    </NavDropdown>
 
-                    <NavDropdown title="City" id="basic-nav-dropdown">
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to="/city-add">Add City</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to="/city-show">Show City</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to="/city-update">Update City</Link>
-                        </NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item>
-                            <Link className='navbar-link-inner' to>Cancel</Link>
-                        </NavDropdown.Item>
-                    </NavDropdown>
-                    <Nav.Link>
-                        <Link className='navbar-link' to="/comments">Comments</Link>
-                    </Nav.Link>
-                </Nav>
-            </Container>
-        </Navbar>
+    const toggleBtn = useRef();
+    const container = useRef();
+    const ul = useRef();
+    const pages = [...document.querySelectorAll('.page')];
+    const overlay = document.querySelector('.overlay');
+    const links = [...document.querySelectorAll('.link')];
+
+    let currentPageIndex = 0;
+
+    const toggleClickHandler=  () => {
+        toggleBtn.current.classList.toggle('active')
+        container.current.classList.toggle('active');
+        ul.current.classList.toggle('show');
+    }
+
+    const changePage = (i) => {
+        overlay.style.animation = `slide 1s linear 1`;
+        setTimeout(() => {
+            pages[currentPageIndex].classList.remove('active');
+            pages[i].classList.add('active');
+            currentPageIndex = i;
+        }, 500);
+        setTimeout(() => {
+            overlay.style.animation = null;
+        }, 1000);
+    }
+
+    links.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            changePage(i);
+        })
+    })
+    return (
+        <div className='navbar-container'>
+            <nav className="navbar">
+                <p className="brand neonText">GameGlider</p>
+                <div onClick={toggleClickHandler} ref={toggleBtn} className="toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+
+            <ul ref={ul} className="nav-list">
+                <li className="link">home</li>
+                <li className="link">Tournament</li>
+                <li className="link">News</li>
+                <li className="link">project</li>
+                <li className="link">about</li>
+            </ul>
+
+            <header ref={container} className="page-container">
+                <span className="overlay"></span>
+                <section className="page home active">
+                    {/* <p className="title">home</p> */}
+                </section>
+                <section className="page project">
+                    <p className="title">project</p>
+                </section>
+                <section className="page about">
+                    <p className="title">about</p>
+                </section>
+            </header>
+        </div>
     );
 }
 
