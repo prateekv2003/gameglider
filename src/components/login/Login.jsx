@@ -23,7 +23,7 @@ const Login = () => {
                         <input type="submit" value="Login" />
                     </div>
                 </form>
-                <hr />
+                <hr className='style-seven' />
             </div>
         </div>
     </div>
