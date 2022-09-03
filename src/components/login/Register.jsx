@@ -20,7 +20,7 @@ const Register = () => {
                         <input type="password" name="password" id="password" placeholder='password'/>
                     </div>
                     <div className="form-input-group">
-                        <input type="submit" value="Login" />
+                        <input type="submit" value="Register" />
                     </div>
                 </form>
                 <hr className='style-seven' />

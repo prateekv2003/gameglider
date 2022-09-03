@@ -4,11 +4,6 @@ import "./navbar.css"
 import { TweenMax, Power1, TimelineLite, TweenLite } from "gsap";
 import * as THREE from 'three'
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
 function TopNavbar() {
     const bg = useRef();
     const toggleBtn = useRef();
@@ -363,7 +358,7 @@ function TopNavbar() {
 
     return (
         <div className='navbar-container'>
-            <nav className="navbar">
+            <nav className="landing-navbar">
                 <p className="brand neonText">GameGlider</p>
                 <div className='nav-btns'>
                     <Link to="/login">Login</Link>
