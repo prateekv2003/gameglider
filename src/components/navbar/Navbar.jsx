@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect} from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "./navbar.css"
 import { TweenMax, Power1, TimelineLite, TweenLite } from "gsap";
@@ -292,12 +292,25 @@ function TopNavbar() {
             cElem.receiveShadow = true;
             cElem.castShadow = true;
             cElem.position.y = Math.abs(mathRandom(5));
-            city.add(cElem);
+
+            /* NEW changes done by prateek */
+            var toycar
+            var loader = new THREE.ObjectLoader();
+            loader.load('./toycar.obj', './toycar.mtl',
+                function (object) {
+                    toycar = object;
+                    toycar.rotateZ(10.99); //toycar.rotateZ(-10.99);
+                    scene.add(toycar);
+                });
+            city.add(toycar);
+            /* **************************** */
+            // city.add(cElem);
         };
 
         var generateLines = function () {
             for (var i = 0; i < 60; i++) {
-                createCars(0.1, 20);
+                // createCars(0.1, 20);
+                createCars(10, 2);
             };
         };
 
@@ -352,11 +365,15 @@ function TopNavbar() {
         <div className='navbar-container'>
             <nav className="navbar">
                 <p className="brand neonText">GameGlider</p>
-                <div onClick={toggleClickHandler} ref={toggleBtn} className="toggle-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div className='nav-btns'>
+                    <Link to="/login">Login</Link>
+                    <div onClick={toggleClickHandler} ref={toggleBtn} className="toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
+
             </nav>
 
             <ul ref={ul} className="nav-list">

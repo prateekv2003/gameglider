@@ -1,0 +1,92 @@
+.login-container{
+    background: url(../../assets/login-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container .glass-container{
+    /* border: 2px solid #fff; */
+    border: none;
+    border-radius: 2rem;
+    
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    padding: 1.5rem;
+    width: 30%;
+}
+
+.login_heading-container{
+    color: #fff;
+    font-size: 30px;
+    padding: 0.7rem;
+}
+
+.login_heading-container h1{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-container .form-input-group{
+    margin: 2rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-container .form-input-group label{
+    margin-right: 1rem;
+}
+
+.form-container .form-input-group input:not(input[type="submit"]){
+    padding: .5rem;
+    display: flex;
+    width: 100%;
+    border-radius: 7px;
+    margin:unset;
+    border: 1px solid transparent;
+}
+
+.form-input-group input[type="submit"]{
+    background-color: transparent;
+    color: #fff;
+    padding: 0.7rem 2.5rem;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+
+.form-input-group input[type="submit"]:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+}
+
+.form-container hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+.form-container hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
