@@ -100,6 +100,19 @@
     }
 }
 
+.nav-btns{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-btns a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 27px;
+    letter-spacing: 2px;
+}
 .toggle-btn {
     position: relative;
     width: 50px;
@@ -248,7 +261,7 @@
     text-transform: capitalize;
     font-size: 20px;
     padding: 10px;
-    transition: .5s;
+    transition: .2s;
     letter-spacing: 2px;
     list-style: none;
     cursor: pointer;
