@@ -1,14 +1,13 @@
 import React from 'react'
-import './login.css'
 import {FaUser} from 'react-icons/fa'
 import {RiLockPasswordFill} from 'react-icons/ri'
-import { Link } from 'react-router-dom'
-const Login = () => {
+
+const Register = () => {
   return (
     <div className='login-container'>
         <div className='glass-container'>
             <div className="login_heading-container">
-                <h1>Login</h1>
+                <h1>Register</h1>
             </div>
             <div className="form-container">
                 <form className="login-form">
@@ -25,11 +24,10 @@ const Login = () => {
                     </div>
                 </form>
                 <hr className='style-seven' />
-                <small className='register-link'>Not a member yet? <Link to="/register">Register</Link></small>
             </div>
         </div>
     </div>
   )
 }
 
-export default Login
+export default Register
