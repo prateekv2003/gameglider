@@ -25,7 +25,7 @@ const Home = () => {
               <a href="#">Logout</a>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
 
 
