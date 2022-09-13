@@ -85,7 +85,7 @@ const SideNav = () => {
           />
 
           <NavUrl
-            url="/analytics"
+            url="/home"
             icon={<AiOutlineHome />}
             description="Home"
           />

@@ -1,69 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import './css/swiper.css';
 
-
-:root {
-  --nav-width: 92px;
-
-  /* === Colors === */
-  --primary-color: #623cea;
-  --bg-color: #12192c;
-  --sub-color: #b6cefc;
-  --white-color: #ffff;
-
-  --body-font: "Poppins", sans-serif;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.875rem;
-  --z-fixed: 100;
-
-  --margin-xl: 4rem;
-  --margin-lg: 3rem;
-  --margin-md: 2rem;
-  --margin-sm: 1rem;
-  --margin-xs: 0.8rem;
-  --margin-xxs: 0.5rem;
-  --padding-xl: 4rem;
-  --padding-lg: 3rem;
-  --padding-md: 2rem;
-  --padding-sm: 1rem;
-  --padding-xs: 0.8rem;
-  --padding-xxs: 0.5rem;
-
-  font-family: "Poppins", "sans-serif";
-  overflow: hidden;
-  background: rgb(240, 244, 248);
-}
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-:root{
-  --bg-dark : rgba(1,1,1,1)
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #root{
-  display: flex;
-  background: rgb(7, 9, 18);
-  background: linear-gradient(0deg, rgba(7, 9, 18, 1) 0%, rgba(34, 50, 76, 1) 100%);
+    background-image: url(./assets/images/others/body-bg.webp);
 }
 
-.content{
-  width: 100%;
+.container{
+    color: #fff;
 }

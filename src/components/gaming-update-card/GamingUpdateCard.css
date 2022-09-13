@@ -1,0 +1,7 @@
+.gaming-update-card{
+    background-image: url(../../assets/images/others/gaming-update.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3.5rem;
+}

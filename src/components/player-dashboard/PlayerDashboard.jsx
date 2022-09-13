@@ -52,7 +52,7 @@ const PlayerDashboard = () => {
 
     return (
         <div className='dashboard-container' id="dashboard-container">
-            <div className="container" id="navbar">
+            <div className="dashboard-inner-container" id="navbar">
                 <nav className="nav">
                     <div>
                         <div className="nav_brand">
