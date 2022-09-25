@@ -10,6 +10,7 @@ import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import Home from './components/home/Home'
 import ER404 from './components/404/404'
+import MatchArea from './components/home/match/MatchArea'
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
                 {/* <Route path="/login" element={<Login />} /> */}
                 <Route path="/Register" element={<Register />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/tournament" element={<MatchArea />} />
                 <Route path="*" element={<ER404 />} />
               </Routes>
               

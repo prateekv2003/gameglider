@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Logo from "../logo/Logo";
+import { Link } from "react-router-dom";
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
 
@@ -56,21 +57,21 @@ export default function NavBar() {
                             }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-white hover:text-indigo-200">
+                            <Link to="/profile" className="text-white hover:text-indigo-200">
                                 <a href="javascript:void(0)">Dashboard</a>
-                            </li>
-                            <li className="text-white hover:text-indigo-200">
+                            </Link>
+                            <Link to="/game" className="text-white hover:text-indigo-200">
                                 <a href="javascript:void(0)">Games</a>
-                            </li>
-                            <li className="text-white hover:text-indigo-200">
+                            </Link>
+                            <Link to="/tournament" className="text-white hover:text-indigo-200">
                                 <a href="javascript:void(0)">Tournaments</a>
-                            </li>
-                            <li className="text-white hover:text-indigo-200">
+                            </Link>
+                            <Link to="/team" className="text-white hover:text-indigo-200">
                                 <a href="javascript:void(0)">Team</a>
-                            </li>
-                            <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">Friends</a>
-                            </li>
+                            </Link>
+                            <Link to="/blogs" className="text-white hover:text-indigo-200">
+                                <a href="javascript:void(0)">Blog</a>
+                            </Link>
                         </ul>
 
                         {/* <div className="mt-3 space-y-2 lg:hidden md:inline-block">
