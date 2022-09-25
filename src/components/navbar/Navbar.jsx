@@ -372,7 +372,7 @@ function TopNavbar() {
             </nav>
 
             <ul ref={ul} className="nav-list">
-                <li className="link">home</li>
+                <li className="link">Dashboard</li>
                 <li className="link">Tournament</li>
                 <li className="link">News</li>
                 <li className="link">project</li>

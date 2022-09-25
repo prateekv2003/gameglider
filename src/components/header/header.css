@@ -1,3 +1,26 @@
-.custom-header-container{
-    background-image: url(../../assets/images/others/body-bg.webp);
+.header-container{
+    height: 0px;
 }
+
+/* .navbar-container{
+    height: 90px;
+} */
+
+.header-container .navbar-bg{
+    background-color: #5a1297;
+}
+
+.nav-items{
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+    padding: 8px 16px;
+}
+
+.nav-items:hover{
+    color: white;
+    background: #eb3992;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
