@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../logo/Logo";
 //import Navbar from "./Navbar";
 import "./header.css"
@@ -73,19 +74,19 @@ const Header = ({ data }) => {
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                                 <li >
-                                    <a className="nav-items" href="javascript:void(0)">Home</a>
+                                    <Link to="/"className="nav-items" href="javascript:void(0)">Home</Link>
                                 </li>
                                 <li >
-                                    <a className="nav-items" href="javascript:void(0)">Games</a>
+                                    <Link to="/games" className="nav-items" href="javascript:void(0)">Games</Link>
                                 </li>
                                 <li >
-                                    <a className="nav-items" href="javascript:void(0)">Tournaments</a>
+                                    <Link to="/tournament" className="nav-items" href="javascript:void(0)">Tournaments</Link>
                                 </li>
                                 <li >
-                                    <a className="nav-items" href="javascript:void(0)">Profile</a>
+                                    <Link to="/dashboard" className="nav-items" href="javascript:void(0)">Dashboard</Link>
                                 </li>
                                 <li >
-                                    <a className="nav-items" href="javascript:void(0)">About US</a>
+                                    <Link to="/dashboard" className="nav-items" href="javascript:void(0)">About US</Link>
                                 </li>
                             </ul>
 

@@ -6,6 +6,7 @@ import WelcomeFeaturesArea from './welcome-features/WelcomeFeaturesArea'
 import UpcomingMatch1 from "../../assets/images/team-logo/upcoming-game-thumb1.webp"
 import UpcomingMatch2 from "../../assets/images/team-logo/upcoming-game-thumb2.webp"
 import UpcomingMatch3 from "../../assets/images/team-logo/upcoming-game-thumb3.webp"
+import PopulerGamesArea from './games/PopulerGames';
 
 const Home = () => {
 
@@ -1614,6 +1615,7 @@ const Home = () => {
         <WelcomeFeaturesArea/>
         <WatchLiveStremingArea/>
         <MatchArea data={upcomming_match}/>
+        <PopulerGamesArea/>
     </>
   )
 }
